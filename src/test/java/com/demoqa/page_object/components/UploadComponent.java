@@ -1,13 +1,18 @@
 package com.demoqa.page_object.components;
 
+import com.codeborne.selenide.SelenideElement;
+
 import java.io.File;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class UploadComponent {
 
+    SelenideElement
+            uploadFile = $("#uploadPicture");
+
     public UploadComponent uploadImage(String pathToFile) {
-        $("#uploadPicture").uploadFile(new File(pathToFile));
+        uploadFile.uploadFile(new File(pathToFile));
 
         return this;
     }

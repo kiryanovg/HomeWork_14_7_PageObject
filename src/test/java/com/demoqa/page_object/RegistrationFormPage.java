@@ -35,7 +35,6 @@ public class RegistrationFormPage {
             clickSubmit = $("#submit");
 
 
-
     //Action
 
     public RegistrationFormPage openPage() {
@@ -48,6 +47,8 @@ public class RegistrationFormPage {
         $("#firstName").setValue(value);
 
         return this;
+
+
     }
 
     public RegistrationFormPage setLastName(String value) {
@@ -82,60 +83,60 @@ public class RegistrationFormPage {
         return this;
     }
 
-     public RegistrationFormPage setSubjects(String value) {
+    public RegistrationFormPage setSubjects(String value) {
         $("#subjectsInput").setValue(value).pressEnter();
 
         return this;
-     }
+    }
 
-     public RegistrationFormPage clickCheckboxHobbies (String Hobbies) {
+    public RegistrationFormPage clickCheckboxHobbies(String Hobbies) {
         $("[for='hobbies-checkbox-2']").click();
 
         return this;
-     }
+    }
 
-     public RegistrationFormPage uploadImage (String pathToFile) {
+    public RegistrationFormPage uploadImage(String pathToFile) {
         uploadComponent.uploadImage(pathToFile);
 
         return this;
 
-     }
+    }
 
-     public RegistrationFormPage setAddress ( String value) {
+    public RegistrationFormPage setAddress(String value) {
         $("#currentAddress").setValue(value);
 
         return this;
 
-     }
+    }
 
-     public RegistrationFormPage setState (String stateName) {
+    public RegistrationFormPage setState(String stateName) {
         $("#state").click();
         $(byText("Haryana")).click();
 
         return this;
-     }
+    }
 
-     public RegistrationFormPage setCity (String cityName) {
+    public RegistrationFormPage setCity(String cityName) {
         $("#city").click();
         $(byText("Karnal")).click();
 
         return this;
 
-     }
+    }
 
-     public RegistrationFormPage clickSubmit (String submit) {
+    public RegistrationFormPage clickSubmit(String submit) {
         $("#submit").click();
 
         return this;
 
-     }
+    }
 
-    public RegistrationFormPage checkResultsTableVisible(){
+    public RegistrationFormPage checkResultsTableVisible() {
         resultsModalComponent.checkIsVisible();
 
         return this;
 
-     }
+    }
 
     public RegistrationFormPage checkResult(String key, String value) {
         resultsModalComponent.checkResult(key, value);
